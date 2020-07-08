@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_dialog_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="对话框1"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_dialog_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="对话框2"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@+id/btn_dialog_one" />
+
+    <Button
+        android:id="@+id/btn_dialog_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="弹出输入框3"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@+id/btn_dialog_two" />
+
+    <Button
+        android:id="@+id/btn_dialog_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="警告对话框"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@+id/btn_dialog_three" />
+
+    <Button
+        android:id="@+id/btn_dialog_five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="顶部弹出"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dialog_one" />
+
+    <Button
+        android:id="@+id/btn_dialog_six"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="底部弹出"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_dialog_five"
+        app:layout_constraintLeft_toRightOf="@+id/btn_dialog_five" />
+
+    <com.gcssloop.widget.RCRelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_dialog_five"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dialog_five"
+        app:round_corner="15dp"
+        app:stroke_color="@color/colorPrimaryDark"
+        app:stroke_width="2dp">
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:background="@color/colorPrimary"
+            android:text="圆角布局测试" />
+
+    </com.gcssloop.widget.RCRelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
